@@ -30,13 +30,16 @@ class ArtRecyclerAdapter @Inject constructor(
         }
 
 
+
     }
 
     private val recyclerListDiffer = AsyncListDiffer(this, diffUtil)
 
+
+
     var arts: List<Art>
-        get() = recyclerListDiffer.currentList
-        set(value) = recyclerListDiffer.submitList(value)
+    get() = recyclerListDiffer.currentList
+    set(value) = recyclerListDiffer.submitList(value)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArtViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.art_row, parent, false)

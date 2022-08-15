@@ -14,6 +14,7 @@ class ArtFragmentFactory @Inject constructor(
 ) : FragmentFactory() {
 
     override fun instantiate(classLoader: ClassLoader, className: String): Fragment {
+
         return when(className){
             ImageApiFragment::class.java.name -> ImageApiFragment(imageRecyclerAdapter)
             ArtDetailsFragment::class.java.name -> ArtDetailsFragment(glide)
